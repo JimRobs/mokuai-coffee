@@ -1,0 +1,44 @@
+<%
+    function indent(string, n){
+        var spaces = '';
+        for(var i = 0; i < n; i++){
+            spaces += ' ';
+        }
+        return string.replace(/\n/g, '\n'+spaces);
+    }
+%><%
+if(options.prepend.length > 0){
+%>
+((modules, module, exports, setModule, setter)-><%
+    _.each(options.prepend, function(prepend){ %>
+    <%= indent(prepend, 4) %><%
+    });%>
+)(modules, undefined, undefined, undefined, undefined)<%
+}
+%><%
+_.forOwn(modules, function(content, name){
+%>
+setModule '<%= name %>', ->
+    module = {}
+    exports = module.exports = {}
+    ((modules, module, exports, setModule, setter)->
+        <%= indent(content, 8) %><%
+        if(options.autoexports){
+        %>
+        module.exports = <%= name %>;<%
+        }
+        %>
+    )(modules, module, exports, undefined, undefined);
+    module.exports<%
+});
+%><%
+if(options.append.length){
+%>
+((modules, module, exports, setModule, setter)-><%
+    _.each(options.append, function(append){ %>
+    <%= indent(append, 4) %><%
+    });
+    %>
+)(modules, undefined, undefined, undefined, undefined)<%
+}
+%>

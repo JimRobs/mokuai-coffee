@@ -1,0 +1,6 @@
+options:
+    jshintrc: true
+src:
+    - mokuai-coffee.js
+    - bin/mokuai-coffee.js
+test: test/**/*.test.js
