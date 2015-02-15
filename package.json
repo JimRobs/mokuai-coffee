@@ -1,7 +1,7 @@
 {
   "name": "mokuai-coffee",
   "version": "1.0.0",
-  "description": "Makes your CoffeeScript mokuai-able",
+  "description": "Makes your CoffeeScript mokuai-able.",
   "main": "mokuai-coffee.js",
   "scripts": {
     "test": "grunt test"
