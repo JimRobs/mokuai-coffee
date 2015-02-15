@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+/*
+ * mokuai-coffee
+ * https://github.com/JimRobs/mokuai-coffee
+ *
+ * Copyright (c) 2015 JimRobs
+ * Licensed under the MIT license.
+ */
 var fs = require('fs-extra');
 
 var _ = require('lodash');
