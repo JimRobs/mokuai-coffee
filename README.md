@@ -2,6 +2,8 @@
 
 Makes your CoffeeScript [mokuai](https://github.com/JimRobs/mokuai)-able.
 
+[![Build Status](https://travis-ci.org/JimRobs/mokuai-coffee.svg)](https://travis-ci.org/JimRobs/mokuai-coffee)
+
 ## Description
 
 This module works with your CoffeeScript to create a [mokuai](https://github.com/JimRobs/mokuai) closure.
