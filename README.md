@@ -1,12 +1,15 @@
 # mokuai-coffee
 
-Makes your CoffeeScript [mokuai](https://github.com/JimRobs/mokuai)-able.
+> Makes your CoffeeScript [mokuai](https://github.com/JimRobs/mokuai)-able.
 
 [![Build Status](https://travis-ci.org/JimRobs/mokuai-coffee.svg)](https://travis-ci.org/JimRobs/mokuai-coffee)
 
 ## Description
 
-This module works with your CoffeeScript to create a [mokuai](https://github.com/JimRobs/mokuai) closure.
+[Mokuai](https://github.com/JimRobs/mokuai) lets you write pure JavaScript modules, without any concern about
+concatenation order and require calls.
+
+Mokuai-coffee works with your CoffeeScript to create a [mokuai](https://github.com/JimRobs/mokuai) closure.
 
 Plus, if you want to mix JavaScript and CoffeeScript mokuai modules, you can use the extra-feature **partial**, which
 only compiles you CoffeeScript into mokuai modules, without wrappping them into a mokuai closure, so you can use it
