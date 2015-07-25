@@ -1,6 +1,6 @@
 (function() {
-  var __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __hasProp = {}.hasOwnProperty;
+  var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
 
   (function(modules, module, exports, setModule, setter) {
     return modules.originalWindow = window;
@@ -30,8 +30,8 @@
     exports = module.exports = {};
     (function(modules, module, exports, setModule, setter) {
       var Horse;
-      Horse = (function(_super) {
-        __extends(Horse, _super);
+      Horse = (function(superClass) {
+        extend(Horse, superClass);
 
         function Horse() {
           return Horse.__super__.constructor.apply(this, arguments);
@@ -57,8 +57,8 @@
     (function(modules, module, exports, setModule, setter) {
       var Animal;
       Animal = (function() {
-        function Animal(_at_name) {
-          this.name = _at_name;
+        function Animal(name) {
+          this.name = name;
         }
 
         Animal.prototype.move = function(meters) {
@@ -79,8 +79,8 @@
     exports = module.exports = {};
     (function(modules, module, exports, setModule, setter) {
       var Snake;
-      Snake = (function(_super) {
-        __extends(Snake, _super);
+      Snake = (function(superClass) {
+        extend(Snake, superClass);
 
         function Snake() {
           return Snake.__super__.constructor.apply(this, arguments);
